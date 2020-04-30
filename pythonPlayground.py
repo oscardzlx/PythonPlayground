@@ -103,3 +103,30 @@ spacer()
 
 emptySet = set()
 print(emptySet)
+
+spacer()
+
+#Dictionaries
+
+earth = {'element': 'water', 'life': True} #Keys, the key can be almost any data type not just str. 
+print(earth.get('element')) #Use get method to access keys, we don't want an error for a reponse if not found. 
+print(earth.get('location', 'not found')) #Pass a second arg to display if not found
+
+earth.update({'location':'milky way'}) #Use update method to add. 
+print(earth)
+
+removedEarthInfo = earth.pop('location') #Delete but can keep value. 
+print(removedEarthInfo)
+
+print(len(earth)) #Numbers of keys. 
+print(earth.keys())
+print(earth.values())
+print(earth.items())
+
+for item in earth: #But this just displays the keys, we cant' do it like a list.  
+    print(item)
+
+for key,values in earth.items(): #This is the correct way to access Dictionaries. 
+    print(key, values)    
+
+    
