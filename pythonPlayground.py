@@ -67,6 +67,25 @@ for index,color in enumerate(colors,start=1): #index;position
 
 spacer()
 
+numbers = [4,2,1,3,5]
+
+for num in numbers:         #breaks, stops if found. 
+    if num == 3:
+        print(num,'Found!')
+        break
+    else:
+        print(num)
+
+spacer()
+
+for num in numbers:         #ignores 
+    if num == 3:
+        continue
+    else:
+        print(num)
+
+spacer()
+
 #Convert list to string. 
 colors_str = '-'.join(colors) #"with -"
 print(colors_str)
@@ -128,5 +147,55 @@ for item in earth: #But this just displays the keys, we cant' do it like a list.
 
 for key,values in earth.items(): #This is the correct way to access Dictionaries. 
     print(key, values)    
+
+spacer()
+
+#Conditionals
+
+
+counter = 5
+if counter == 0:
+    print('No value')
+elif counter <=5:
+    print('Value is in range: 1-5')
+else:
+    print('Value is beyond 5')
+
+if 1 == 1 and 2==3: 
+    print('Numbers are broken')
+else:
+    print('Maths are safe!')
+
+#Object identity 'is' Checks same in memory. 
+
+a = [1,2,3]
+b = [1,2,3]
+print(a == b) #Are values the same? 
+
+print(a is b) #Are they the same? 
+
+print(id(a))
+print(id(b))
+print(id(a), id(b),sep='-') #Print this way too, interesting. 
+
+#Default false values. 
+
+#False
+#None
+#Zero for any numeric type
+#Any empty sequence, For example: '',[],()
+#Any empty mapping: {}
+
+condition = ''
+
+if condition:
+    print('Evaluated to True')
+else:
+    print('Evaluated to False')
+
+
+
+
+
 
     
