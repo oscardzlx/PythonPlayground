@@ -1,5 +1,6 @@
-#Using Python 3.8.0 
-#Fist part of my python adventure
+####Using Python 3.8.0 
+####Fist part of my python adventure
+
 """
 #Always a clasic
 message = '\nHello world!'
@@ -28,7 +29,7 @@ def spacer():
         print()
         spaceCounter += 1    
 
-#Lists
+###Lists
 colors = ['Blue','Green', 'Red','Pink']
 print(colors)
 print(colors[-1])   #-1 Last element of the list.
@@ -58,7 +59,9 @@ print(bw_sorted)
 
 spacer()
 
-#Loops
+###Loops
+##For 
+# is used more like a manipulator here. 
 for color in colors: 
     print(color)
 
@@ -86,6 +89,49 @@ for num in numbers:         #ignores
 
 spacer()
 
+letters = ['a', 'b','c', 'd', 'e'] #Nested loops. 
+numbers.sort()
+for letter in letters:
+    for num in numbers:
+        print(num,letter,sep='-')
+spacer()
+
+#"in range" This is used when we know how many times we want the code to run. 
+
+for i in range(1,11):
+    print(f'This is the {i} line') #We can use the formatted string literal. (f-strings)
+
+spacer()
+
+##While
+#True and forever till condition breaks loop. 
+
+whileCounter = 1
+
+while whileCounter <= 10: 
+    print(f'This is the number:{whileCounter}')
+    whileCounter += 1
+
+spacer()
+
+print(f'This is the value of the whileCounter var: {whileCounter}') #Ex. print a counter, excluding values that I don't like using a Perpetual while. 
+
+while True:  #Perpetual While
+    
+    if (whileCounter == 13 or  whileCounter == 14):
+        whileCounter += 1
+        continue
+    
+    if whileCounter > 15:
+        break
+    
+    print(whileCounter)
+    whileCounter += 1
+
+    
+    
+spacer()
+
 #Convert list to string. 
 colors_str = '-'.join(colors) #"with -"
 print(colors_str)
@@ -96,14 +142,14 @@ print(colors_list)
 
 spacer()
 
-#Tuples
+###Tuples
 #Inmutable. 
 numbers = (2,3,5,1,4)
 print(numbers)
 
 spacer()
 
-#Sets
+###Sets
 #No order. 
 #Throw away duplicates. 
 #Show share values with other sets. 
@@ -125,7 +171,7 @@ print(emptySet)
 
 spacer()
 
-#Dictionaries
+###Dictionaries
 
 earth = {'element': 'water', 'life': True} #Keys, the key can be almost any data type not just str. 
 print(earth.get('element')) #Use get method to access keys, we don't want an error for a reponse if not found. 
@@ -150,7 +196,7 @@ for key,values in earth.items(): #This is the correct way to access Dictionaries
 
 spacer()
 
-#Conditionals
+##Conditionals
 
 
 counter = 5
@@ -192,10 +238,3 @@ if condition:
     print('Evaluated to True')
 else:
     print('Evaluated to False')
-
-
-
-
-
-
-    
