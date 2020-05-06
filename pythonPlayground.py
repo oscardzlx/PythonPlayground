@@ -212,6 +212,7 @@ if 1 == 1 and 2==3:
 else:
     print('Maths are safe!')
 
+spacer()
 #Object identity 'is' Checks same in memory. 
 
 a = [1,2,3]
@@ -223,7 +224,7 @@ print(a is b) #Are they the same?
 print(id(a))
 print(id(b))
 print(id(a), id(b),sep='-') #Print this way too, interesting. 
-
+spacer()
 #Default false values. 
 
 #False
@@ -238,3 +239,46 @@ if condition:
     print('Evaluated to True')
 else:
     print('Evaluated to False')
+spacer()
+
+###Functions 
+
+def blank():
+    pass        #So we can leave it in blank. 
+
+def hello():
+    print('Hello!')
+
+hello()
+
+def userInfo(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+personal = { 'name' : 'Micah', 'age': 22 }
+courses = ['Art','History', 'Math']
+
+userInfo(*courses, **personal)
+##Notes 
+#A parameter is the variable listed inside the parentheses in the function definition.
+#An argument is the value that is sent to the function when it is called.
+
+def favFood(*args): #args name is used by norm but can be anything. 
+    print(*args, sep= ', ')
+
+favFood('Pizza', 'Ice cream', 'hamburger')
+#If you do not know how many arguments that will be passed into your function
+
+#You can also send arguments with the key = value syntax.
+#This way the order of the arguments does not matter.
+
+def favIceCream(f3,f2,f1):
+    print('My favourite ice cream is: ' + f1)
+    print('but I also like: ' + f3)
+
+favIceCream(f1= 'chocolate', f2= 'vainilla', f3= 'blueberry')  
+
+###Slicing 
+
+##Reverse string 
+print('hello'[::-1])
