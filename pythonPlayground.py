@@ -278,6 +278,22 @@ def favIceCream(f3,f2,f1):
 
 favIceCream(f1= 'chocolate', f2= 'vainilla', f3= 'blueberry')  
 
+spacer()
+
+###Using *args and **kwargs
+
+def akwa(*args, **kwargs):
+    '''Shows the utility of args and kwargs'''  #That's how we describe functions 
+    print(arguments)
+    print(kwarguments)
+
+arguments = ['Blue', 'Green', 'Red']
+kwarguments = {'0': False, '1': True}
+
+akwa(*arguments,**kwarguments)
+
+spacer()
+
 ###Slicing 
 
 ##Reverse string 
