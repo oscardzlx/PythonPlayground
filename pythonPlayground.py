@@ -298,3 +298,26 @@ spacer()
 
 ##Reverse string 
 print('hello'[::-1])
+
+spacer()
+
+# To write this simbol ' ~ ' use: 
+#option + ñ 
+
+####Importing & Using the stardard library: 
+###Random
+import random
+
+choice = random.choice(colors)
+
+print(colors)
+print(choice)
+
+spacer()
+
+###os
+from os import getcwd as pwd 
+
+print(pwd())
+
+
